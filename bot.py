@@ -43,6 +43,10 @@ async def auto_clicker():
         print("Ожидание 6 минут до следующего нажатия...")
         await asyncio.sleep(360)
 
-with client:
-    client.loop.run_until_complete(auto_clicker())
-                
+async def main():
+    await client.start()
+    await auto_clicker()
+
+if __name__ == '__main__':
+    asyncio.run(main())
+    
