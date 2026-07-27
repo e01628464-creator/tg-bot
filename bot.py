@@ -1,15 +1,17 @@
 import os
 import asyncio
 from telethon import TelegramClient
+from telethon.sessions import StringSession
 
 API_ID = 32681074
 API_HASH = '59181b6a0f9d5d01456b5b53b0806b22'
 
-STRING_SESSION = os.getenv('STRING_SESSION')
+SESSION_STRING = os.getenv('STRING_SESSION', '')
+
+client = TelegramClient(StringSession(SESSION_STRING), API_ID, API_HASH)
+
 CHAT_USERNAME = '@patrickstarsrobot'
 BUTTON_TEXT = 'Кликер'
-
-client = TelegramClient(STRING_SESSION, API_ID, API_HASH)
 
 async def auto_clicker():
     print("Бот-кликер успешно запущен!")
@@ -49,4 +51,4 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
-    
+        
