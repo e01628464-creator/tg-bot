@@ -3,8 +3,8 @@ import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
-API_ID = 32681074
-API_HASH = '59181b6a0f9d5d01456b5b53b0806b22'
+API_ID = тут має бути код 
+API_HASH = 'тут має бути код '
 
 SESSION_STRING = os.getenv('STRING_SESSION', '')
 
